@@ -66,7 +66,7 @@ yellow2blue() {
   local name=${inp%.*}
   echo == conv ${name}.png to ${name}-yb.png
   convert ${inp} \
-    -fuzz 40% \
+    -fuzz 35% \
     -fill '#105ca1' \
     -opaque '#ffff00' \
     ${name}-yb.png
