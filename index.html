@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steps Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media (min-width: 768px) {
+      #sidebar {
+        transform: translateX(0) !important;
+      }
+    }
+  </style>
+</head>
+<body class="flex min-h-screen bg-gray-100">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed z-30 inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:static md:shadow-none">
+    <nav class="h-full flex flex-col p-4 space-y-2">
+      <h2 class="text-xl font-bold mb-4">Steps</h2>
+      <button onclick="showStep(1)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 1</button>
+      <button onclick="showStep(2)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 2</button>
+      <button onclick="showStep(3)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 3</button>
+      <button onclick="showStep(4)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 4</button>
+      <button onclick="showStep(5)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 5</button>
+      <button onclick="showStep(6)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 6</button>
+      <button onclick="showStep(7)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 7</button>
+    </nav>
+  </div>
+
+  <!-- Content Area -->
+  <div class="flex-1 flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow p-4 flex items-center md:hidden">
+      <button id="menuBtn" class="text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <h1 class="ml-4 text-lg font-semibold">My Page</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-6 space-y-6">
+      <!-- Step Sections with Images -->
+      <div id="step-1" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 1</h2>
+        <img src="step-1.png" alt="Step 1" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=201s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-2" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 2</h2>
+        <img src="step-2.png" alt="Step 2" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=462s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-3" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 3</h2>
+        <img src="step-3.png" alt="Step 3" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=847s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-4" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 4</h2>
+        <img src="step-4.png" alt="Step 4" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=1203s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-5" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 5</h2>
+        <img src="step-5.png" alt="Step 5" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=1414s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-6" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 6</h2>
+        <img src="step-6.png" alt="Step 6" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=1665s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+      <div id="step-7" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Step 7</h2>
+        <img src="step-7.png" alt="Step 7" class="w-1/4 max-w-2xl rounded shadow">
+        <p class="mt-2 text-sm text-gray-600">
+          <a href="https://www.youtube.com/watch?v=0Ti5CKsQLts&t=1882s" target="_blank" class="text-blue-500 hover:underline">
+            Watch related video
+          </a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const stepSections = document.querySelectorAll('.step-section');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+
+    function showStep(stepNum) {
+      stepSections.forEach(section => section.classList.add('hidden'));
+      document.getElementById(`step-${stepNum}`).classList.remove('hidden');
+      if (window.innerWidth < 768) {
+        sidebar.classList.add('-translate-x-full');
+      }
+    }
+
+    showStep(2);
+  </script>
+</body>
+</html>
