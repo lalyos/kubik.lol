@@ -19,6 +19,7 @@
   <div id="sidebar" class="fixed z-30 inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:static md:shadow-none">
     <nav class="h-full flex flex-col p-4 space-y-2">
       <h2 class="text-xl font-bold mb-4">Steps</h2>
+      <button onclick="showStep(0)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Overview</button>
       <button onclick="showStep(1)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 1</button>
       <button onclick="showStep(2)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 2</button>
       <button onclick="showStep(3)" class="text-left py-2 px-3 rounded hover:bg-gray-200">Step 3</button>
@@ -39,12 +40,21 @@
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      <h1 class="ml-4 text-lg font-semibold">My Page</h1>
+      <h1 class="ml-4 text-lg font-semibold">Solving Rubik's Cube</h1>
     </header>
 
     <!-- Main Content -->
     <main class="p-6 space-y-6">
       <!-- Step Sections with Images -->
+      <div id="step-0" class="step-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Overview</h2>
+        This method focuses on a beginner-friendly approach to solving the Rubik's Cube. 
+        <ul class="list-disc list-inside space-y-2">
+          <li>You can intuitively solve the top layer: the white face with the logo. In this case, go to step-3.</li>
+          <li>The linked video has a different color scheme: whenever you hear/see <strong>yellow</strong>, replace it with <strong>blue</strong>.</li>
+          <li>We will solve layer by layer: starting with <strong>edges</strong>, followed by <strong>corners</strong></li>
+        </ul>
+      </div>
       <div id="step-1" class="step-section hidden">
         <h2 class="text-2xl font-bold mb-4">Step 1</h2>
         <img src="step-1.png" alt="Step 1" class="w-1/4 max-w-2xl rounded shadow">
@@ -71,6 +81,11 @@
             Watch related video
           </a>
         </p>
+        <!-- New row with two images -->
+        <div class="flex space-x-4 mt-4">
+          <img src="moves-3.png" alt="Moves 3" class="w-1/4 max-w-xs rounded shadow">
+          <img src="moves-3-flip.png" alt="Moves 3 Flip" class="w-1/4 max-w-xs rounded shadow">
+        </div>
       </div>
       <div id="step-4" class="step-section hidden">
         <h2 class="text-2xl font-bold mb-4">Step 4</h2>
@@ -128,7 +143,7 @@
       }
     }
 
-    showStep(2);
+    showStep(0);
   </script>
 </body>
 </html>
